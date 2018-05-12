@@ -1,0 +1,21 @@
+{
+    "name": "화천중학교 급식알리미",
+    "short_name": "화천중 급식알리미",
+    "icons": [{
+          "src": "icons/icon_64.png",
+          "sizes": "64x64",
+          "type": "image/webp"
+        }, {
+          "src": "icons/icon_64.png",
+          "sizes": "64x64"
+        }, {
+          "src": "icons/icon_128.png",
+          "sizes": "128x128",
+          "density": 2
+        }],
+    "scope": "/racer/",
+    "start_url": "index.html",
+    "display": "standalone",
+    "orientation": "portrait", 
+    "theme-color": "#018786"
+  }

@@ -1,0 +1,19 @@
+{
+  "name": "hwacheon-feed",
+  "version": "1.0.0",
+  "description": "hwacheon-feed",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wjdgks1224/hwacheon-feed.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wjdgks1224/hwacheon-feed/issues"
+  },
+  "homepage": "https://github.com/wjdgks1224/hwacheon-feed#readme"
+}
