@@ -2,165 +2,219 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#018786">
-    <style>
-        @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
-        .container {
-            padding: 10px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#018786">
+  <style>
+    @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+    .container {
+      padding: 10px;
+      padding-top: 65px;
+    }
 
-        body {
-            margin: 0;
-            background-color: #cfd8dc;
-            font-family: 'Noto Sans KR', sans-serif;
-        }
+    body {
+      margin: 0;
+      background-color: #cfd8dc;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
 
-        .mdc-fab {
-            position: fixed;
-            right: 16px;
-            bottom: 16px;
-        }
+    * {
+      user-select: none;
+    }
 
-        header.mdc-toolbar {
-            background-color: #018786;
-            box-shadow: 0px 0px 4px black;
-        }
+    .mdc-fab {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+    }
 
-        .cards {
-            box-shadow: 0px 0px 2px black;
-            border-radius: 2px;
-            background-color: white;
-            padding: 16px;
-            box-sizing: border-box;
-        }
+    header.mdc-toolbar {
+      background-color: #018786;
+      z-index: 1000;
+      position: fixed;
+      box-shadow: 0px 0px 4px black;
+    }
 
-        .cards h1 {
-            font-weight: 900;
-        }
+    .mdc-card {
+      background-color: white;
+      padding: 16px;
+      margin-bottom: 8px;
+    }
 
-        section.category {
-            font-size: 15px;
-            color: #888888;
-            font-weight: 700;
-        }
+    section.category {
+      font-size: 15px;
+      color: #888888;
+      font-weight: 700;
+    }
 
-        @media all and (max-width: 768px) {
-            /*폰에서는*/
-            .cards {
-                width: calc(100vw - 50px);
-                height: 400px;
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: 10px;
-            }
-        }
+    .mdc-card div.title {
+      font-weight: 700;
+      font-size: 20px;
+      color: #333333;
+    }
 
-        @media all and (min-width: 769px) {
-            .cards {
-                display: inline-block;
-                width: auto;
-                min-width: calc(100vw / 6);
-            }
-        }
-    </style>
+    .mdc-card div.subtitle {
+      font-size: 16px;
+      color: #aaaaaa;
+      font-weight: 500;
+    }
+
+    .titler>* {
+      display: inline-block;
+    }
+
+    .card-type-container {
+      padding: 7px;
+      background-color: #3F3F3F;
+      border-radius: 47px;
+      margin-right: 10px;
+    }
+
+    .card-type {
+      font-size: 40px;
+      color: white;
+    }
+  </style>
 </head>
 
 <body>
 
-    <header class="mdc-toolbar">
-        <div class="mdc-toolbar__row">
-            <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-                <button href="#" class="menu material-icons mdc-toolbar__menu-icon">menu</button>
-                <span class="mdc-toolbar__title">피드</span>
-            </section>
-        </div>
-    </header>
-    <aside class="mdc-drawer mdc-drawer--temporary mdc-typography">
-        <nav class="mdc-drawer__drawer">
-            <header class="mdc-drawer__header">
-                <div class="mdc-drawer__header-content">
-                    화천중학교 급식알리미
-                </div>
-            </header>
-            <nav id="icon-with-text-demo" class="mdc-drawer__content mdc-list">
-                <a class="mdc-list-item mdc-list-item--activated" href="#">
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>Inbox
-                </a>
-                <a class="mdc-list-item" href="#">
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">star</i>Star
-                </a>
-            </nav>
-        </nav>
-    </aside>
-    <button class="mdc-fab material-icons" aria-label="Favorite">
-        <span class="mdc-fab__icon">
-            share
-        </span>
-    </button>
-
-    <div class="container">
-        <article class="cards meal">
-            <section class="category">급식</section>
-            <h1>2018 05 12</h1>
-            <ul class="mdc-list">
-                <li class="mdc-list-item">
-                    <span class="mdc-list-item__text">
-                        돼지고기 숯불볶음
-                        <span class="mdc-list-item__secondary-text">
-                            알레르기 정보가 없습니다
-                        </span>
-                    </span>
-                </li>
-
-                <li class="mdc-list-item">
-                    <span class="mdc-list-item__text">
-                        찹쌀 스파게티 볶음
-                        <span class="mdc-list-item__secondary-text">
-                            1, 5, 61
-                        </span>
-                    </span>
-                </li>
-            </ul>
-        </article>
-
-        <article class="cards">
-            롸롸롸
-        </article>
+  <header class="mdc-toolbar">
+    <div class="mdc-toolbar__row">
+      <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+        <button href="#" class="menu material-icons mdc-toolbar__menu-icon">menu</button>
+        <span class="mdc-toolbar__title">피드</span>
+      </section>
     </div>
-    <div class="mdc-snackbar" aria-live="assertive" aria-atomic="true" aria-hidden="true">
-        <div class="mdc-snackbar__text"></div>
-        <div class="mdc-snackbar__action-wrapper">
-            <button type="button" class="mdc-snackbar__action-button"></button>
+  </header>
+  <aside class="mdc-drawer mdc-drawer--temporary mdc-typography">
+    <nav class="mdc-drawer__drawer">
+      <header class="mdc-drawer__header">
+        <div class="mdc-drawer__header-content">
+          화천중학교 급식알리미
         </div>
+      </header>
+      <nav id="icon-with-text-demo" class="mdc-drawer__content mdc-list">
+        <a class="mdc-list-item mdc-list-item--activated" href="#">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>Inbox
+        </a>
+        <a class="mdc-list-item" href="#">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">star</i>Star
+        </a>
+      </nav>
+    </nav>
+  </aside>
+  <button class="mdc-fab material-icons" aria-label="Favorite">
+    <span class="mdc-fab__icon">
+      share
+    </span>
+  </button>
+
+  <div class="container">
+
+  </div>
+  <div class="mdc-snackbar" aria-live="assertive" aria-atomic="true" aria-hidden="true">
+    <div class="mdc-snackbar__text"></div>
+    <div class="mdc-snackbar__action-wrapper">
+      <button type="button" class="mdc-snackbar__action-button"></button>
     </div>
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-    <script>
-        let drawer = new mdc.drawer.MDCTemporaryDrawer(document.querySelector('.mdc-drawer--temporary'));
-        document.querySelector('.menu').addEventListener('click', () => drawer.open = true);
-        const MDCSnackbar = mdc.snackbar.MDCSnackbar;
-        const MDCSnackbarFoundation = mdc.snackbar.MDCSnackbarFoundation;
+  </div>
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <script>
+    let drawer = new mdc.drawer.MDCTemporaryDrawer(document.querySelector('.mdc-drawer--temporary'));
+    document.querySelector('.menu').addEventListener('click', () => drawer.open = true);
+    const MDCSnackbar = mdc.snackbar.MDCSnackbar;
+    const MDCSnackbarFoundation = mdc.snackbar.MDCSnackbarFoundation;
+    const snackbar = new MDCSnackbar(document.querySelector('.mdc-snackbar'));
 
-        const snackbar = new MDCSnackbar(document.querySelector('.mdc-snackbar'));
+    for (i in document.querySelectorAll('.meal .mdc-list-item')) {
+      document.querySelectorAll('.meal .mdc-list-item')[i].onclick = function () {
+        snackbar.show({
+          message: '관심 음식에 추가됨',
+          actionText: '취소',
+          actionHandler: function () {
+            console.log('my cool function');
+          }
+        });
+      }
+    }
 
-        for (i in document.querySelectorAll('.meal .mdc-list-item')) {
-            document.querySelectorAll('.meal .mdc-list-item')[i].onclick = function () {
-                snackbar.show({
-                    message: '관심 음식에 추가됨',
-                    actionText: '취소',
-                    actionHandler: function () {
-                        console.log('my cool function');
-                    }
-                });
-            }
+    date = new Date()
+
+    function getMeal(year, month, date, callback) {
+      fetch(
+        `https://hwacheon.ml/getLunch?year=${year}&month=${month}&date=${date}&school=%ED%99%94%EC%B2%9C%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90&phase=4`
+      ).then((res) => {
+        if (res.status === 200 || res.status === 201) { // 성공을 알리는 HTTP 상태 코드면
+          res.text().then(text => {
+            jsonText = JSON.parse(text)
+            callback(jsonText)
+          }); // 텍스트 출력
+        } else { // 실패를 알리는 HTTP 상태 코드면
+          console.log('Connection failed!!!')
         }
-    </script>
+      }).catch(err => console.error(err));
+    }
+
+    function Card(title, icon, subtitle, contents) {
+      document.getElementsByClassName('container')[0].innerHTML +=
+        `
+        <article class="mdc-card">
+              <div class="titler">
+                <section class="card-type-container">
+                  <i class="material-icons card-type">${icon}</i>
+                </section>
+                <section>
+                  <div class="title">${title}</div>
+                  <div class="subtitle">${subtitle}</div>
+                </section>
+              </div>
+              <div class="contents">${contents}</div>
+        </article>
+      `
+    }
+
+    for (i = -1; i < 3; i++) {
+      (function (i) {
+        console.log(i)
+        getMeal(date.getFullYear(), (date.getMonth() + 1), date.getDate() + i, function (data) {
+          console.log(data, i)
+          console.log('날짜', date.getFullYear(), (date.getMonth() + 1), date.getDate() + i)
+          if (data.err) {
+            Card((date.getMonth() + 1) + '월 ' + (date.getDate() + i) + '일 급식', 'restaurant', '점심', '급식 정보가 없습니다')
+          } else {
+            lunch = []
+            list = document.createElement('ul')
+            list.className = 'mdc-list mdc-list--two-line'
+            for (j in data.lunch) {
+              listItem = document.createElement('li')
+              listItem.className = 'mdc-list-item'
+
+              listPrimaryText = document.createElement('span')
+              listPrimaryText.className = 'mdc-list-item__text'
+              listPrimaryText.innerHTML = data.lunch[j].menu
+              if (data.lunch[j].allergyInfo) {
+                listSecondaryText = document.createElement('span')
+                listSecondaryText.className = 'mdc-list-item__secondary-text'
+                listSecondaryText.innerHTML = data.lunch[j].allergyInfo
+
+                listPrimaryText.appendChild(listSecondaryText)
+              }
+              listItem.appendChild(listPrimaryText)
+              list.appendChild(listItem)
+            }
+
+            Card((date.getMonth() + 1) + '월 ' + (date.getDate() + i) + '일 급식', 'restaurant', '점심', list.outerHTML)
+          }
+        })
+      })(i)
+    }
+  </script>
 </body>
 
 </html>
