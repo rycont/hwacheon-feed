@@ -1,0 +1,68 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+.container {
+  padding: 10px;
+  padding-top: 65px;
+}
+
+body {
+  margin: 0;
+  background-color: #cfd8dc;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+* {
+  user-select: none;
+}
+
+.mdc-fab {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+}
+
+header.mdc-toolbar {
+  background-color: #018786;
+  z-index: 1000;
+  position: fixed;
+  box-shadow: 0px 0px 4px black;
+}
+
+.mdc-card {
+  background-color: white;
+  padding: 16px;
+  margin-bottom: 8px;
+}
+
+section.category {
+  font-size: 15px;
+  color: #888888;
+  font-weight: 700;
+}
+
+.mdc-card div.title {
+  font-weight: 700;
+  font-size: 20px;
+  color: #333333;
+}
+
+.mdc-card div.subtitle {
+  font-size: 16px;
+  color: #aaaaaa;
+  font-weight: 500;
+}
+
+.titler > * {
+  display: inline-block;
+}
+
+.card-type-container {
+  padding: 7px;
+  background-color: #3f3f3f;
+  border-radius: 47px;
+  margin-right: 10px;
+}
+
+.card-type {
+  font-size: 40px;
+  color: white;
+}
